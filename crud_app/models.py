@@ -1,10 +1,9 @@
-from sqlalchemy import Column, Integer, String 
-from database import base
+from sqlalchemy import Column, Integer, String
+from database import Base
 
-# write a class for the table
-class Employee(base):
-    # give a name to the table
+
+class Employee(Base):
     __tablename__ = 'employees'
-    id = Column(Integer,primary_key=True,index=True)
-    name = Column(String,index=True)
-    email =Column(String,unique=True,index=True)
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String, index=True)
+    email = Column(String, unique=True, index=True)
