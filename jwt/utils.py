@@ -4,8 +4,8 @@ pwd_context = CryptContext(schemes=['bcrypt'],deprecated='auto') # for hashing t
 
 fake_user_db = {
     'johndoe':{
-        'username':'johndoe'
-        'password':pwd_context.hash('secret123')
+        'username':'johndoe',
+        'hashed_password':pwd_context.hash('secret123')
     }
 }
 
